@@ -1,5 +1,5 @@
 # apiLivebox
-script écri en php pour automatisé les action d'une livebox ( reboot pour pyload)
+script écri en php pour automatisé les action d'une livebox ( renouveler ip pour pyload)
 
 # dépandence
 les packet : php5 (https://packages.debian.org/jessie/php5) et php5-curl (https://packages.debian.org/jessie/php5-curl)
