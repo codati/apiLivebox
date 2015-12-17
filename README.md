@@ -17,7 +17,6 @@ donne la nouvelle  ip
 redémare la box
 
 ./scanWifiCanal
-
-scanWifiCanal rescanne les wifis pour utiliser le canal le moins brouillé
+rescanne les wifis pour utiliser le canal le moins brouillé
 
 
