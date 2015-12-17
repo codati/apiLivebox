@@ -1,0 +1,22 @@
+#!/usr/bin/php
+<?php
+
+
+require_once "http.php";
+$http = new http("192.168.1.100");
+$http->connection("9003");
+$http->changeIp();
+
+$ip = $http->getExternalIp();
+$count = 0;
+while (! $ip)
+{
+    $ip = $http->getExternalIp();
+    if($count == 100)
+    {
+        throw new Exception("connection break");
+    }
+    sleep(1);
+    $count++;
+}
+echo $ip;

@@ -1,0 +1,23 @@
+#!/usr/bin/php
+<?php
+
+
+require_once "http.php";
+$http = new http("192.168.1.100");
+$http->connection("9003");
+
+echo' canal avent : '.$http->getInformationWifi()->Channel.PHP_EOL;
+sleep(5);
+
+$http->scanWifiCanalAuto();
+
+//for ($index = 0; $index < 50; $index++) {
+//    print_r($http->getInformationWifi());
+//}
+sleep(5);
+echo' canal apres : '.$http->getInformationWifi()->Channel.PHP_EOL;
+//print_r(stream_get_meta_data(STDIN));
+$read = array(STDIN);
+$write  = NULL;
+$except = NULL;
+stream_select($read, $write, $except, 5);
